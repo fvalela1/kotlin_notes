@@ -1,0 +1,28 @@
+//work with any type of collections
+
+val numList2 = 1..20
+
+//adds all values in the array
+val listSum = numList2.reduce { x,y -> x + y }
+
+println("reduce sum : $listSum")
+
+//starts with the initial value of 5 and adds the rest of the values afterwards
+val listSum2 = numList2.fold(5) { x,y -> x + y }
+
+println("fold sum : $listSum2")
+
+//check if any values are able to meet a condition
+println("Evens : ${numList2.any { it % 2 ==0}}")
+
+//check if all values are able to meet a condition
+println("Evens : ${numList2.all { it % 2 == 0 }}")
+
+//return a list of values that meet a condition
+val big3 = numList2.filter { it > 3}
+
+big3.forEach {n -> println(">3 : $n")}
+
+//map: performs an action on every single item and return new list
+val times7 = numList2.map { it * 2 }
+times7.forEach { n -> println("*7 : $n") }

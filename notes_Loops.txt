@@ -1,0 +1,41 @@
+//iterating through 1 to 10
+for(x in 1..10) {
+    println("Loop : $x")
+}
+
+//generates random number from 1 to 50
+val rand = Random()
+val magicNum = rand.nextInt(50) + 1
+
+var guess = 0
+
+//standard while loop
+while (magicNum != guess){
+    guess += 1
+}
+
+println("Magic Number was $guess")
+
+//iterating using continue and break
+for (x in 1..20) {
+    if (x % 2 == 0) {
+        continue
+    }
+
+    println("Odd : $x")
+
+    if (x == 15) break
+}
+
+//creating array
+var arr3: Array<Int> = arrayOf(3,6,9)
+
+//iterating through indices
+for(i in arr3.indices) {
+    println("Mult 3 : ${arr3[1]}")
+}
+
+//interating through iterable (aka arr3.withIndex)
+for((index,value) in arr3.withIndex()) {
+    println("Index : $index Value : $value")
+}

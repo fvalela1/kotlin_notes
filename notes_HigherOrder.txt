@@ -1,0 +1,29 @@
+//higher order function: either accepts or returns another function
+val numList = 1..20
+
+val evenList = numList.filter { it % 2 ==0 }    //if a function only has one parameter, dont have to declare it -> just use 'it' instead
+evenList.forEach { n -> println(n) }
+
+//param of first function is 3
+val mult3 = makeMathFunc(3)
+
+//param of second function is 5
+println("5 * 3 = ${mult3(5)}")
+
+//passed function for mathOnList
+val multiply2 = {num1: Int -> num1 * 2}
+
+val numList2 = arrayOf(1,2,3,4,5)
+
+mathOnList(numList2, multiply2)
+
+}
+//return dynamically a created function - function that creates functions
+//return a custom function that's going to multiply values times the value passed in
+fun makeMathFunc(num1: Int): (Int) -> Int = {num2 -> num1 * num2}
+
+//receives a list and a function to use on the list
+fun mathOnList(numList: Array<Int>, myFunc: (num: Int) -> Int) {
+    for(num in numList){
+        println("mathOnLIst ${myFunc(num)}")
+}

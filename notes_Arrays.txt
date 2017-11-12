@@ -1,0 +1,25 @@
+Kotlin notes:
+
+//array that gives 1 to 10
+val oneTo10 = 1..10 						//[1,2,3,4,5,6,7,8,9,10]
+
+//array that gives alphabet					
+val alpha = "A".."Z"						//['A','B','C','D','E',...]
+
+//checks if R is in alpha
+println("R in Alpha: ${"R" in alpha}")		//R in alpha: true
+
+//array that gives 10 down to 1
+val tenTo1 = 10.downTo(1) 					//[10,9,8,7,6,5,4,2,1]
+
+//array that gives 2 to 20
+val twoTo20 = 2.rangeTo(20)					//[2,3,4,5,6,7,8,...]
+
+//array that gives 1 to 10, in steps of 3
+val range3 = oneTo10.step(3)				//[1,4,7,10]
+
+//prints everything in range3
+for (x in range3) println("range3 : ${x}")	
+
+//prints everything in tenTo1 but reversed
+for (x in tenTo1.reversed()) println("Reverse : ${x}")	//Reverse : 1

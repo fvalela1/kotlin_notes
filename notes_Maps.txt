@@ -1,0 +1,22 @@
+//key is an int but value can be anything
+val map = mutableMapOf<Int, Any?>()
+
+//manually add key value pairs
+val map2 = mutableMapOf(1 to "Doug", 2 to 25)
+
+//manually add to map
+map[1] = "Derek"
+map[2] = 42
+
+println("Map Size : ${map.size}")
+
+//add to map
+map.put(3, "Pittsburgh")
+
+//remove map with key as 2
+map.remove(2)
+
+//iterate through map
+for((x,y) in map){
+    println("Key : $x Value : $y")
+}

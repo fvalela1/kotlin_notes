@@ -1,0 +1,62 @@
+//regular function
+fun add(num1: Int, num2: Int) : Int = num1+num2
+println("5+4 = ${add(5,4)}")
+
+//no return needed for single line functions
+//also, added default values
+fun subtract(num1: Int = 1, num2: Int = 1) = num1 - num2
+println("5 - 4 = ${subtract(5,4)}")
+
+//named parameters
+println("4 - 5 = ${subtract(num2 = 5, num1 = 4)}")
+
+//no return type (like void)
+fun sayHello(name: String) : Unit = println("Hello $name")
+
+sayHello("Derek")
+
+//SO SICK
+//intialized two variables in one shot
+val (two, three) = nextTwo(1)
+println("1 $two $three")
+
+//adds all nums together
+println("Sum = ${getSum(1,2,3,4,5)}")
+
+//define function literals
+val multiply = {num1: Int, num2: Int -> num1 * num2}
+println("5 * 3 = ${multiply(5,3)}")
+
+//factorial recursion example
+println("5! = ${fact(5)}")
+
+}
+
+//returns a pair
+//utilizes multiple returns in one function
+fun nextTwo(num: Int): Pair<Int, Int>{
+    return Pair(num+1, num+2)
+}
+
+//send variable number of parameters
+//also forEach also lambda(?)
+fun getSum(vararg nums: Int): Int {
+    var sum = 0
+
+    nums.forEach {n -> sum += n}
+
+    return sum
+}
+
+/*using tail recursion - factorial example
+ *use tailrec to implement a stack safe recursion
+ *it allows the compiler to optimize our recursive method
+ *and removes the possibility to overflow - stack safe recursion
+*/
+fun fact(x: Int): Int {
+    tailrec fun factTail(y: Int, z: Int): Int {
+        if(y == 0) return z
+        else return factTail(y-1, y * z)
+    }
+    return factTail(x, 1)
+}
