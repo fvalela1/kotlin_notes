@@ -13,7 +13,7 @@ Notes I took while reading/watching various resources about programming in Kotli
 - [Article: Converting Android Project to Kotlin](https://medium.com/google-developers/lessons-learned-while-converting-to-kotlin-with-android-studio-f0a3cb41669)
 
 ## Dependecies (for Android):
-- Android Studio 3.0, OR
+- Android Studio 3.0 or higher, OR
 - Android Studio 2.3 w/ Kotlin plugin installation
   - Preferences → Plugins → install JetBrains plugin (button: bottom of window) → search 'Kotlin' → install
 
