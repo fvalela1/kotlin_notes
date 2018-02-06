@@ -3,7 +3,7 @@ Notes I took while reading/watching various resources about programming in Kotli
 
 ## Resources
 - [Kotlin docs](http://kotlinlang.org/docs/reference/)
-- [Java to Kotlin syntax](https://fabiomsr.github.io/from-java-to-kotlin/classes.html)
+- [Java to Kotlin syntax](https://fabiomsr.github.io/from-java-to-kotlin/)
 - [Basic syntax of Kotlin](https://kotlinlang.org/docs/reference/basic-syntax.html)
 - [Kotlin Koans: Hands-on Learning](https://try.kotl.in/)
 - [Kotlin Idioms](http://kotlinlang.org/docs/reference/idioms.html)
